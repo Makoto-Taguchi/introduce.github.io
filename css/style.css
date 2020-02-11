@@ -1,0 +1,344 @@
+body {
+  font-family: "Hiragino Kaku Gothic ProN","メイリオ", sans-serif;
+/*  macでヒラギノ、windowsでメイリオ、どちらもなければゴシック体で表示*/
+  font-size: 15px;
+  line-height: 1.8;
+  letter-spacing: 0.8px;
+  color: #333
+}
+
+a {
+  text-decoration: none;
+  color: skyblue;
+}
+
+img {
+  display: block;
+  max-width: 80%;
+  height: auto;
+/*  vertical-align: bottom;*/
+  border: none;
+}
+
+li {
+  list-style: none;
+}
+
+
+
+/*全体に対するCSS*/
+
+#wrapper {
+  padding-top: 50px;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.section .inner {
+/*  max-width: 1380px;*/
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.section-title-area {
+  margin-bottom: 38px;
+  text-align: center
+}
+
+.section-title {
+  font-size:40px;
+  font-weight: normal;
+  line-height: 1;
+  margin-bottom: 15px;
+/*  emはフォントサイズとの相対的な比率*/
+  letter-spacing: 0.05em;
+}
+
+#about .inner,
+#skill .inner {
+  max-width: 1000px;
+}
+
+/*ヘッダー*/
+
+#header {
+  display: flex;
+  /*  フレックスコンテナの交差軸(縦方向)中央に合わせる*/
+  align-items: center;
+/*  フレックスコンテナの主軸(横方向)中央に合わせる*/
+  justify-content: center;
+/*  text-align: center;*/
+/*  height: 86vh;*/
+  position: relative;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#header .logo {
+/*
+  position: relative;
+  margin-bottom: 30px;
+  text-align: center;
+*/
+}
+
+#header .logo-title {
+  font-size: 40px;
+/*  フォントサイズに合わせて行間指定*/
+  line-height: 1;
+  letter-spacing: .2em;
+}
+
+#header .logo-desc {
+  font-size: 20px;
+  margin-top: 5px;
+  text-align: center;
+  letter-spacing: .2em;
+}
+
+/*-------------------
+グローバルナビ
+-------------------*/
+
+#gnav {
+  background-color: #fff;
+  border-bottom: thin solid gray;
+}
+
+#gnav {
+  position: fixed;
+/*  ヘッダーより上に表示*/
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#gnav ul {
+  display: flex;
+/*  フレックスアイテムを複数行に折り返す*/
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#gnav li {
+  font-size: 16px;
+  padding: 0 36px;
+  letter-spacing: .1em;
+}
+
+#gnav li a {
+  position: relative;
+  display: inline-block;
+  padding: 20px 0;
+/*  グローバルナビの効果の時間*/
+  transition: .5s;
+  color: #333;
+}
+
+#gnav li a:hover {
+  opacity: 0.5;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card-image img {
+  width: 100%;
+}
+
+.card-caption {
+  text-align: center;
+}
+
+.card-caption-title {
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.card-caption-info {
+  font-size: 10px;
+}
+
+.card-caption-url {
+  font-size: 10px;
+}
+
+/*-------------------
+Works
+-------------------*/
+
+#works .card {
+/*  flex-basis: 31%;*/
+  margin-bottom: 60px;
+}
+
+/*-------------------
+About
+-------------------*/
+
+#about .section-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#about .section-image {
+/*  flex-basis: 20%;*/
+  margin:0 auto;
+}
+
+#about .section-image img {
+/*  フレックスコンテナ内アイテムの基本幅：横幅の20％*/
+  flex-basis: 20%;
+  margin: 0 auto;
+/*  画像を円形に切り取り*/
+  border-radius: 50%;
+  box-shadow: 0 0 25px 0 #d9d9d9;
+}
+
+about .section-desc {
+  flex-basis: 62%;
+}
+
+/*-------------------
+Skill
+-------------------*/
+
+#skill .card {
+  display: flex;
+/*  1つのスキルの説明の幅46%→２列で表示*/
+  flex-basis: 46%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+#skill .skill-icon {
+  flex-basis: 60px;
+}
+
+#skill .skill-desc {
+/*  スキル説明文の幅＝100%-アイコン幅-30%（余裕を持って）*/
+  flex-basis: calc(100% - 60px - 30px);
+}
+
+#skill .skill-desc-title {
+  margin-bottom: 3px;
+}
+
+#skill .rate {
+  font-size: 16px;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 20px;
+  letter-spacing: .3em;
+}
+
+/*#skill .rate:before,*/
+#skill .rate:after {
+  line-height: 20px;
+/*  rateクラスの上からの距離*/
+  position: absolute;
+  top: 0;
+  left: 0;
+/*  display: inline-block;*/
+  height: 20px;
+  content: "★★★★★";
+}
+
+#skill .rate:before {
+  color: #ddd;
+}
+
+/*
+#skill .rate:before {
+  color: #ddd;
+}
+*/
+
+#skill .rate:after {
+  overflow: hidden;
+/*  white-space: nowrap;*/
+  color: #f181b4;
+}
+
+/*overflowでhidden（はみ出した部分は隠す）になっているので幅狭いほど星が見えなくなる*/
+#skill .rate1:after {
+  width: 20px;
+}
+
+#skill .rate2:after {
+  width: 40px;
+}
+
+#skill .rate3:after {
+  width: 60px;
+}
+
+#skill .rate4:after {
+  width: 80px;
+}
+
+#skill .rate5:after {
+  width: 100px;
+}
+
+/*-------------------
+Contact
+-------------------*/
+
+#contact {
+  background-color: aliceblue;
+}
+
+#contact .contact-list ul {
+  display: flex;
+/*  フレックスアイテム（アイコン）は縦方向末尾（下）にまとめる*/
+  align-items: flex-end;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 200px;
+  margin: 0 auto;
+}
+
+#contact .contact-list li img {
+  width: 80px;
+}
+
+#contact .contact-other {
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/*-------------------
+Footer
+-------------------*/
+
+#footer {
+  background-color: black;
+}
+
+#footer .inner {
+  padding: 30px;
+}
+
+#footer .copyright {
+  font-size: 10px;
+  text-align: center;
+  color: gray;
+}
+
+
+
+
+
+

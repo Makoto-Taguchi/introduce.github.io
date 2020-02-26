@@ -72,6 +72,7 @@ li {
 /*  text-align: center;*/
 /*  height: 86vh;*/
   position: relative;
+  padding-top: 50px;
   margin-bottom: 10px;
   text-align: center;
 }
@@ -148,9 +149,11 @@ li {
   justify-content: space-between;
 }
 
+/*
 .card-image img {
   width: 100%;
 }
+*/
 
 .card-caption {
   text-align: center;
@@ -175,8 +178,11 @@ Works
 -------------------*/
 
 #works .card {
-/*  flex-basis: 31%;*/
+  display: flex;
+  flex-basis: 31%;
   margin-bottom: 60px;
+  justify-content: center;
+  align-items: center;
 }
 
 /*-------------------
@@ -190,7 +196,7 @@ About
 }
 
 #about .section-image {
-/*  flex-basis: 20%;*/
+  flex-basis: 20%;
   margin:0 auto;
 }
 
@@ -199,7 +205,7 @@ About
   flex-basis: 20%;
   margin: 0 auto;
 /*  画像を円形に切り取り*/
-  border-radius: 50%;
+/*  border-radius: 50%;*/
   box-shadow: 0 0 25px 0 #d9d9d9;
 }
 
@@ -221,12 +227,12 @@ Skill
 }
 
 #skill .skill-icon {
-  flex-basis: 60px;
+  flex-basis: 100px;
 }
 
 #skill .skill-desc {
 /*  スキル説明文の幅＝100%-アイコン幅-30%（余裕を持って）*/
-  flex-basis: calc(100% - 60px - 30px);
+  flex-basis: calc(100% - 100px - 30px);
 }
 
 #skill .skill-desc-title {
